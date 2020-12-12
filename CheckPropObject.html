@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <script>
+            let users = {
+                Alan: {
+                    age: 27,
+                    online: true
+                },
+                Jeff: {
+                    age: 32,
+                    online: true
+                },
+                Sarah: {
+                    age: 48,
+                    online: true
+                },
+                Ryan: {
+                    age: 19,
+                    online: true
+                }
+            };
+
+            function isEveryoneHere(obj) {
+                // Only change code below this line
+                let result1 = false;
+                let result2 = false;
+                let result3 = false;
+                let result4 = false;
+                let result5 = false;
+                if(obj.hasOwnProperty('Alan')){
+                   result1 = true; 
+                }
+                if(obj.hasOwnProperty('Jeff')){
+                    result2 = true;
+                }
+                if(obj.hasOwnProperty('Sarah')){
+                    result3 = true;
+                }
+                if('Ryan' in obj){
+                    result4 = true;
+                }
+               if(result1 == true && result2 == true && result3 == true && result4 == true){
+                   result5 = true;
+               }
+               return result5;
+                // Only change code above this line
+             }
+
+            console.log(isEveryoneHere(users));
+        </script>
+    </body>
+</html>
